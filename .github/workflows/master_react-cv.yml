@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '10.14'
+        node-version: '12.x'
 
     - name: npm install, build, and test
       run: |
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'react-cv'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a49b95642efd46ec9a39fa1b503c29ec }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_3cc4a274a9104427894c78906f71446f }}
         package: .
