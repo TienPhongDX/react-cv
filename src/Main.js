@@ -26,18 +26,18 @@ function Main() {
             <div className="col-12 col-md-12 col-lg-10">
               {/* Content */}
               <Switch>
-                <Route exact path="/about" component={About} />
+                <Route path="/about" component={About} />
                 <Route path="/resume" component={Resume} />
                 <Route path="/works" component={About} />
                 <Route path="/blog" component={Blog} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/" render={() => <Redirect to="/about" />} />
+                <Route exact path="/" render={() => <Redirect to="/about" />} />
                 <Route component={() => 404} />
               </Switch>
               <footer className="footer">
-                © Nguyen Tien Phong with
+                © Nguyen Tien Phong with 
                 <span role="img" aria-label="">
-                  🐥
+                   🐥
                 </span>
               </footer>
             </div>

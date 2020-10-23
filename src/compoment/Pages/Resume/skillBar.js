@@ -32,8 +32,8 @@ function skillBar() {
       <div className="box box__border">
         {/* Progress */}
         {progress.map((link, index) => (
-          <div>
-            <div className="progress-text">
+          <div key = {index}>
+            <div  className="progress-text">
               <span>{link.Skill}</span>
             </div>
             <Progress

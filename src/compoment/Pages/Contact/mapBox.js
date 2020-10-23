@@ -1,44 +1,46 @@
-import React,{ useState } from 'react'
-import MapGL, {GeolocateControl } from 'mapbox-gl'
-import 'mapbox-gl/dist/mapbox-gl.css'
+import React from 'react'
+import mapboxgl from "mapbox-gl";
 
-const TOKEN='pk.eyJ1IjoiYXJ0dGVtcGxhdGUiLCJhIjoiY2s0M3I5ZHgzMGEzNDNucXM1cDd0dzl3cSJ9.a2wjLlxz8LzWj9nIoGsshw'
+mapboxgl.accessToken =
+  "pk.eyJ1IjoibnRwaG9uZ2R4NjIwIiwiYSI6ImNrZzZjczRxZTBvZjYycWw3YmM5bTRnMnAifQ.48cF9eyzcVIyDhdKhes9dg";
 
-const geolocateStyle = {
-  float: 'left',
-  margin: '50px',
-  padding: '10px'
-};
+class mapBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lng: 109.107203,
+      lat: 13.379193,
+      zoom: 13
+    };
+  }
 
-const Map = () => {
+  componentDidMount() {
+    const map = new mapboxgl.Map({
+      container: this.mapContainer,
+      style: "mapbox://styles/mapbox/satellite-v9",
+      center: [this.state.lng, this.state.lat],
+      zoom: this.state.zoom
+    });
 
-  const [viewport, setViewPort ] = useState({
-    width: "100%",
-    height: 900,
-    latitude: 0,
-    longitude: 0,
-    zoom: 2
-  })
+    map.on("move", () => {
+      this.setState({
+        lng: map.getCenter().lng.toFixed(4),
+        lat: map.getCenter().lat.toFixed(4),
+        zoom: map.getZoom().toFixed(2)
+      });
+    });
+  }
 
-  const _onViewportChange = viewport => setViewPort({...viewport, transitionDuration: 3000 })
-  
-  return (
-    <div style={{ margin: '0 auto'}}>
-      <h1 style={{textAlign: 'center', fontSize: '25px', fontWeight: 'bolder' }}>GeoLocator: Click To Find Your Location or click <a href="/search">here</a> to search for a location</h1>
-      <MapGL
-        {...viewport}
-        mapboxApiAccessToken={TOKEN}
-        mapStyle="mapbox://styles/mapbox/dark-v8"
-        onViewportChange={_onViewportChange}
-      >
-        <GeolocateControl
-          style={geolocateStyle}
-          positionOptions={{enableHighAccuracy: true}}
-          trackUserLocation={true}
-        />
-      </MapGL>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+          <div>
+            Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom:{" "}
+            {this.state.zoom}
+          </div>
+        <div ref={(el) => (this.mapContainer = el)} className="map mapContainer" />
+      </div>
+    );
+  }
 }
-
-export default Map
+ export default mapBox;

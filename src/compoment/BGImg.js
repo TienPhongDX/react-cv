@@ -7,7 +7,7 @@ function BGImg() {
           className="js-parallax"
           style={{
             "backgroundImage":
-              "url(https://source.unsplash.com/1600x900/?nature,water)",
+               "url(https://source.unsplash.com/1600x900/?nature,water)",
           }}
         />
       </div>
