@@ -43,7 +43,7 @@
         clear: left;
         font: 14px Helvetica, Arial, sans-serif;
       }
-      </style>
+    </style>
 
     <title>React App</title>
   </head>
@@ -87,5 +87,29 @@
     </script>
 
     <script src="assets\demo\plugins-demo.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAxaCTcHa9TgXtPLkjkYvJL11u8q_Khjs4",
+        authDomain: "react-cv-78a46.firebaseapp.com",
+        databaseURL: "https://react-cv-78a46.firebaseio.com",
+        projectId: "react-cv-78a46",
+        storageBucket: "react-cv-78a46.appspot.com",
+        messagingSenderId: "962366242327",
+        appId: "1:962366242327:web:ec244be557877f8b9aa652",
+        measurementId: "G-VDPCLDNSBP",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
