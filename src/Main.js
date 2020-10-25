@@ -16,7 +16,7 @@ import Blog from "./compoment/Pages/Blog/Blog";
 import Contact from "./compoment/Pages/Contact/Contact";
 function Main() {
   return (
-    <Router basename="/">
+    <Router basename="/about" >
       <main className="main">
         <BGImg />
         <div className="container gutter-top">
