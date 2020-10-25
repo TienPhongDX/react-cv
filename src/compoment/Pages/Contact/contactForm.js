@@ -10,7 +10,6 @@ function contactForm() {
       method="post"
       name="mc-embedded-subscribe-form"
       target="_blank"
-      noValidate
     >
       <div className="row">
         <div className="form-group col-12 col-md-6">
