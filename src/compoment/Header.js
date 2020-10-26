@@ -8,7 +8,7 @@ function Header() {
                 <img
                   className="header__photo-img"
                   src="assets/img/84860090_2583871168499593_8890216199707688960_o.jpg"
-                  alt="Ronald Robertson"
+                  alt="Avatar"
                 />
               </div>
               <div className="header__base-info">
