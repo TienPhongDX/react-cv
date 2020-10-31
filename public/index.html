@@ -60,6 +60,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Mailchimp -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" ></script>
     <!-- JavaScripts -->
     <script src="assets\js\jquery-3.4.1.min.js"></script>
     <script src="assets\js\plugins.min.js"></script>
@@ -67,32 +69,7 @@
 
     <!-- Mapbox init -->
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.27.0/mapbox-gl.js"></script>
-    <!-- Mailchimp -->
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script>
-    <script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[1] = "MMERGE1";
-        ftypes[1] = "text";
-        fnames[2] = "MMERGE2";
-        ftypes[2] = "text";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
-    </script>
-
-    <script src="assets\demo\plugins-demo.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    
 
     
   </body>
