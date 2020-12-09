@@ -32,6 +32,7 @@ function Main() {
                 <Route path="/blog" component={Blog} />
                 <Route path="/contact" component={Contact} />
                 <Route exact path="/" render={() => <Redirect to="/about" />} />
+                <Route exact path="/react-cv" render={() => <Redirect to="/about" />} />
                 <Route component={() => 404} />
               </Switch>
               <footer className="footer">

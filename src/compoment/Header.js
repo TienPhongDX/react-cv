@@ -7,7 +7,7 @@ function Header() {
               <div className="header__photo">
                 <img
                   className="header__photo-img"
-                  src="assets/img/84860090_2583871168499593_8890216199707688960_o.jpg"
+                  url="https://scontent.fdad3-2.fna.fbcdn.net/v/t1.0-9/84860090_2583871168499593_8890216199707688960_o.jpg?_nc_cat=101&ccb=2&_nc_sid=09cbfe&_nc_ohc=33m7tU7evwwAX_uXk1G&_nc_ht=scontent.fdad3-2.fna&oh=a0e1648099fcdbf48292ccaa29fec2d1&oe=5FF59F09"
                   alt="Avatar"
                 />
               </div>
